@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "929a0b1e-4c9b-4518-a031-ab1129c039ab",
+		"name": "devconnector2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "regisgter_account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Zaw Moe Hitke\",\r\n    \"email\": \"zawmoehtike@example.com\",\r\n    \"password\": \"roottoor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login_account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"zawmoehtike@example.com\",\r\n    \"password\": \"roottoor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZjMWVmOWZlMTFjNjcxZTg0MzM0NTRjIn0sImlhdCI6MTYwNjU0Nzc4MiwiZXhwIjoxNjA2OTc5NzgyfQ.h3tunI08MWAQyNRBZEWhetzVWBYiTH3oHU9_2QVLgW4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/auth/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save_profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZjMWVmOWZlMTFjNjcxZTg0MzM0NTRjIn0sImlhdCI6MTYwNjU0Nzc4MiwiZXhwIjoxNjA2OTc5NzgyfQ.h3tunI08MWAQyNRBZEWhetzVWBYiTH3oHU9_2QVLgW4",
+						"description": "Lorem ipsm",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"Current Job\",\r\n    \"skills\": \"Android Development, Full Stack Development\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZjMWVmOWZlMTFjNjcxZTg0MzM0NTRjIn0sImlhdCI6MTYwNjU0Nzc4MiwiZXhwIjoxNjA2OTc5NzgyfQ.h3tunI08MWAQyNRBZEWhetzVWBYiTH3oHU9_2QVLgW4",
+						"description": "Lorem ipsm",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZjMWVmOWZlMTFjNjcxZTg0MzM0NTRjIn0sImlhdCI6MTYwNjU0Nzc4MiwiZXhwIjoxNjA2OTc5NzgyfQ.h3tunI08MWAQyNRBZEWhetzVWBYiTH3oHU9_2QVLgW4",
+						"description": "Lorem ipsm",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWZjMWVmOWZlMTFjNjcxZTg0MzM0NTRjIn0sImlhdCI6MTYwNjU0Nzc4MiwiZXhwIjoxNjA2OTc5NzgyfQ.h3tunI08MWAQyNRBZEWhetzVWBYiTH3oHU9_2QVLgW4",
+						"description": "Lorem ipsm",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Lorem ipsm ggwp\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
